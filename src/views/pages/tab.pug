@@ -1,0 +1,29 @@
+extends ../templates/base
+include ../objects/cards
+
+block content 
+    .grid-stack
+    .settings.on
+        .edit(onclick="OpenEditor()")
+            i.fas.fa-edit
+        
+    .editor 
+        .add(onclick="WidgetDashboard()")
+            i.fas.fa-plus
+        .remove(onclick="RemoveWidget()")
+            i.fas.fa-xmark
+        .save(onclick="SaveWidgets()")
+            i.fas.fa-floppy-disk
+        .options(onclick="OpenOptions()")
+            i.fas.fa-gear
+
+block postscripts 
+    script(src="/js/Widgets.js")
+    script(src="/js/Editor.js")
+    script.
+        LoadWidgets()
+        
+block poststyles 
+    link(rel='stylesheet' href='/css/Editor.css')
+    link(rel='stylesheet' href='/css/Tab.css')
+

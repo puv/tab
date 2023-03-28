@@ -1,0 +1,6 @@
+mixin btnInfo(content, url)
+    button.btn.info(onclick="window.location.href='" + url + "'")= content
+
+mixin btnCard(content, func)
+    .btn-card(onclick=func)
+        .title= content

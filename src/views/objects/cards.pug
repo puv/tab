@@ -1,0 +1,9 @@
+include ../objects/buttons
+
+mixin Card(title, elements)
+    .card
+        .header
+            h3.title= title
+        .body
+            each e in elements
+                +btnCard(e[0], e[1])

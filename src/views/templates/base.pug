@@ -1,0 +1,31 @@
+doctype html
+html(lang='en')
+  head
+    block premeta
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no')
+    title tab
+    meta(charset="UTF-8")
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(property="og:locale", content="en_US")
+    meta(property="og:type", content="website")
+    meta(name="revisit-after", content="30 days")
+    META(NAME="ROBOTS", CONTENT="INDEX, FOLLOW")
+    block prestyles
+    link(rel='stylesheet' href='/css/Global.css')
+    link(rel='stylesheet' href='https://use.fontawesome.com/releases/v6.3.0/css/all.css')
+    link(rel="stylesheet" href="/gridstack/dist/gridstack.min.css")
+    block poststyles
+    block prescripts
+    script(src='https://use.fontawesome.com/releases/v6.3.0/js/all.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+    script(src="/gridstack/dist/gridstack-all.js")
+  block body
+    body
+      #overlay
+        block overlay 
+      #content
+        block content
+  block postscripts
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js')

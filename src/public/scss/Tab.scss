@@ -1,0 +1,80 @@
+.grid-stack {
+    background: transparent;
+    border-radius: 10px;
+}
+
+.grid-stack-item-content {
+    background-color: #ffffff;
+    box-sizing: border-box;
+    border-radius: 0.25em;
+
+    .body {
+        display: grid;
+    }
+}
+
+body[data-theme="dark"] {
+    .grid-stack-item-content {
+        background-color: #1e1e1e;
+    }
+}
+
+.settings {
+    background-color: rgba($color: #000, $alpha: 0.1);
+    display: none;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0.5em;
+    border-top-left-radius: 10px;
+    position: absolute;
+    bottom: 1em;
+    padding: 0.5em;
+    justify-self: end;
+
+    &.on {
+        display: grid;
+    }
+
+    .edit {
+        height: 32px;
+        width: 32px;
+        border-radius: 10px;
+        background-color: rgba($color: #ffffff, $alpha: 0.1);
+        transition: all 0.2s ease-in-out;
+        display: grid;
+        place-content: center;
+        color: #000;
+
+        &:hover {
+            background-color: rgba($color: #ffffff, $alpha: 0.25);
+            color: #00ff00;
+        }
+    }
+
+    .remove {
+        background-color: rgba($color: #ffffff, $alpha: 0.1);
+
+        &:hover {
+            background-color: rgba($color: #ff0000, $alpha: 0.1);
+        }
+
+        &.on {
+            background-color: rgba($color: #ff0000, $alpha: 0.25);
+        }
+    }
+}
+
+.widget {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.widget_overlay {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    display: grid;
+    place-content: center;
+    position: absolute;
+    top: 0;
+}

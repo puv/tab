@@ -1,0 +1,13 @@
+extends ./_base
+
+block content
+    link(rel="stylesheet", href="/css/Widgets/Digital.css")
+    -for(var j = 0; j < 6; j++)
+        .column
+            -for(var i = 0; i < (j === 0 ? 3 : (10 - !(j % 2) * 4)); i++)
+                .num=i
+        -if(j % 2 === 1 && j < 5)
+            .colon
+    script(src="/js/Widgets/Digital.js") 
+    script.
+        Start(#{tz})

@@ -1,0 +1,138 @@
+@import "Tab";
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+
+    #popup {
+        min-width: 36em;
+        min-height: 36em;
+        padding: 1em;
+        border-radius: 10px;
+        border: 1px solid #ffffff;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+        display: grid;
+        grid-template-rows: min-content auto;
+        grid-gap: 1em;
+        position: fixed;
+        place-self: center;
+        text-align: center;
+
+        .title {
+            grid-row: 1;
+            text-align: center;
+            font-size: 1em;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            font-weight: 800;
+            margin: 0em;
+        }
+    }
+}
+
+#widgetList {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 1em;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 1em;
+        box-shadow: inset 0 0 10px rgb(0 0 0 / 50%);
+        aspect-ratio: 1/1;
+        width: 10em;
+        justify-content: space-around;
+
+        .icon {
+            place-self: center;
+            font-size: 3em;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 72px;
+            height: 72px;
+            background-size: contain;
+        }
+
+        .btn {
+            background-color: rgba($color: #ffffff, $alpha: 0.1);
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+            padding: 0.5em 1em;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                background-color: rgba($color: #ffffff, $alpha: 0.25);
+            }
+        }
+
+        .title {
+            text-align: center;
+            font-size: 1em;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            font-weight: 800;
+            margin: 0em;
+        }
+    }
+}
+
+.editor {
+    background-color: rgba($color: #000, $alpha: 0.1);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.5em;
+    border-top-left-radius: 10px;
+    position: absolute;
+    display: none;
+    bottom: 1em;
+    padding: 0.5em;
+    justify-self: end;
+
+    &.on {
+        display: grid;
+    }
+
+    .add,
+    .remove,
+    .save,
+    .options {
+        height: 32px;
+        width: 32px;
+        border-radius: 10px;
+        background-color: rgba($color: #ffffff, $alpha: 0.1);
+        transition: all 0.2s ease-in-out;
+        display: grid;
+        place-content: center;
+        color: #000;
+
+        &:hover {
+            background-color: rgba($color: #ffffff, $alpha: 0.25);
+            color: #00ff00;
+        }
+    }
+
+    .remove {
+        background-color: rgba($color: #ffffff, $alpha: 0.1);
+
+        &:hover {
+            background-color: rgba($color: #ff0000, $alpha: 0.1);
+        }
+
+        &.on {
+            background-color: rgba($color: #ff0000, $alpha: 0.25);
+        }
+    }
+}

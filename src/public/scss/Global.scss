@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+body {
+    background: linear-gradient(135deg, #6f9fe6 0%, #4fa38e 100%);
+    margin: 0;
+    height: 98vh;
+    max-height: 98vh;
+    overflow: hidden;
+    font-family: "Open Sans", sans-serif;
+}
+
+#content {
+    background-color: rgba($color: #ffffff, $alpha: 0.1);
+    margin: 1em;
+    border-radius: 10px;
+    height: calc(100vh - 2em);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    display: grid;
+}

@@ -1,0 +1,35 @@
+#welcome {
+  place-self: center;
+  text-align: center;
+}
+#welcome h1 {
+  font-size: 3em;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  font-weight: 800;
+  margin: 0em;
+}
+#welcome h4 {
+  font-size: 1.25em;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  font-weight: 800;
+  margin: 0em;
+}
+#welcome button {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  font-size: 1.5em;
+  margin-top: 1em;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+#welcome button:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+/*# sourceMappingURL=Index.css.map */

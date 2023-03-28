@@ -1,0 +1,14 @@
+extends ./_base
+
+block content
+    link(rel="stylesheet", href="/css/Widgets/Analog.css")
+    .clock
+        .clock__second
+        .clock__minute
+        .clock__hour
+        .clock__axis
+        -for(var j = 0; j < 60; j++)
+            section.clock__indicator
+    script(src="/js/Widgets/Analog.js") 
+    script.
+        Start(#{tz})

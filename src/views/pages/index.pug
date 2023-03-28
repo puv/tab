@@ -1,0 +1,12 @@
+extends ../templates/base
+include ../objects/buttons
+
+block content 
+    #welcome 
+        h1 tab.puv.bar 
+        h4 Take control of your tab 
+        +btnInfo('Get started', "/new")
+
+
+block poststyles 
+    link(rel='stylesheet' href='/css/Index.css')
